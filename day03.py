@@ -37,13 +37,10 @@ def exec():
     min_distance = 0
     min_steps = 0
 
-    for (x, y) in intersections:
-        manhattan_distance = abs(x) + abs(y)
-        if min_distance == 0 or manhattan_distance < min_distance:
-            min_distance = manhattan_distance
-        steps = wire1_coords[(x, y)] + wire2_coords[(x, y)]
-        if min_steps == 0 or steps < min_steps:
-            min_steps = steps
+    min_distance = min([abs(x) + abs(y) for (x, y) in intersections])
+    min_steps = min(
+        [wire1_coords[(x, y)] + wire2_coords[(x, y)] for (x, y) in intersections]
+    )
 
     print(min_distance)
     print(min_steps)
