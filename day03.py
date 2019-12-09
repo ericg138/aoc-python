@@ -38,9 +38,7 @@ def exec():
     min_steps = 0
 
     min_distance = min([abs(x) + abs(y) for (x, y) in intersections])
-    min_steps = min(
-        [wire1_coords[(x, y)] + wire2_coords[(x, y)] for (x, y) in intersections]
-    )
+    min_steps = min([wire1_coords[(x, y)] + wire2_coords[(x, y)] for (x, y) in intersections])
 
     print(min_distance)
     print(min_steps)

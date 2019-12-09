@@ -6,10 +6,7 @@ def is_valid_part1(password):
 
 
 def is_valid_part2(password):
-    return (
-        password == "".join(sorted(password))
-        and 2 in collections.Counter(password).values()
-    )
+    return password == "".join(sorted(password)) and 2 in collections.Counter(password).values()
 
 
 def exec():
