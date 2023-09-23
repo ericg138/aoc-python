@@ -1,2 +1,2 @@
-# adventofcode-2019
+# aoc-python
 https://adventofcode.com/2019
